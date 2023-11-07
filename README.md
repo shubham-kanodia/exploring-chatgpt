@@ -25,3 +25,18 @@ pip install -r requirements.txt
 ```
 OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
 ```
+
+## Summary
+
+The flow contains three main components:
+
+* [Assistant](core/assistant.py)
+* [Thread](core/thread.py)
+* [Runner](core/runner.py)
+
+**Assistant:** The assistant contains the instructions, model and tools to use.
+
+**Thread:** The thread represents a conversation session between assistant and user. It holds the messages and other context information related to that session. 
+
+**Run:** Assistants and threads provide context while the actual execution happens using Runs. Run is responsible for executing the thread and has multiple statuses like queued, in_progress, completed, failed etc indicating its lifecycle.
+
